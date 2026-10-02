@@ -18,7 +18,7 @@ cd mmig-polarity-optimization
 
 The command builds pinned ABC from source, builds the frozen synthesis implementation, checks input hashes, reruns T/P/M, performs raw ABC CEC, maps all outputs, runs direct MIN lowering and the machine-dependent runtime sensitivity, regenerates CSVs/tables/figure, verifies the manuscript's deterministic numbers, and compiles `paper/main.pdf`. The first run needs network access to fetch the pinned ABC commit and system dependencies. Subsequent synthesis does not call online services. For a container environment use `./reproduce.sh --docker`; for the deterministic paper data only use `./reproduce.sh --skip-runtime`; for a quicker check of committed reference networks use `./reproduce.sh --verify-only`. `./reproduce.sh --smoke` runs the one-circuit CI check.
 
-The measured clean-reproduction runtime and Docker status are reported in `RELEASE_AUDIT.md`; they are not inferred from the archived per-flow timings.
+The measured clean-clone reproduction took 749 s on the tested machine; the full Docker run took 638 s with cached image and dependencies. These are observed runtimes, not guarantees for another computer. Details are in `RELEASE_AUDIT.md`.
 
 ## Contents
 
