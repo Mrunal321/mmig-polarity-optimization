@@ -1,0 +1,15 @@
+name: Small reproducibility smoke test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  one-circuit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install build requirements
+        run: sudo apt-get update && sudo apt-get install -y build-essential cmake git python3
+      - name: Build and verify one frozen circuit
+        run: MMIG_JOBS=2 ./reproduce.sh --smoke

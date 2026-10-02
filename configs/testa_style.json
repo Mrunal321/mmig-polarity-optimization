@@ -1,0 +1,9 @@
+{
+  "flags": [
+    "--mode=area",
+    "--mig-flow=identity",
+    "--import-lut",
+    "--fixed-mig-inv-opt"
+  ],
+  "provenance": "local Testa-style control; not original Testa code"
+}

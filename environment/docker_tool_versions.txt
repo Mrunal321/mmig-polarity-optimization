@@ -1,0 +1,6 @@
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+cmake version 3.28.3
+Python 3.12.3
+matplotlib 3.6.3
+Latexmk, John Collins, 31 Jan. 2024. Version 4.83
+pdfinfo version 24.02.0

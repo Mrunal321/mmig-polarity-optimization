@@ -1,0 +1,35 @@
+{
+  "pre": [
+    "--mode=area",
+    "--mig-flow=standard",
+    "--import-lut",
+    "--rw-cut=4",
+    "--rw-cut-limit=10",
+    "--rs-cut=8",
+    "--rs-insert=2",
+    "--resub-dc",
+    "--resub-dc-window=12"
+  ],
+  "round": [
+    "--mode=area",
+    "--mig-flow=compress2rs",
+    "--import-lut",
+    "--mig-allow-zero-gain",
+    "--rw-cut=4",
+    "--rw-cut-limit=10",
+    "--rs-cut=8",
+    "--rs-insert=2",
+    "--resub-dc",
+    "--resub-dc-window=12"
+  ],
+  "rounds": 2,
+  "exact_if_gates_at_most": 3500,
+  "phase": [
+    "--mode=area",
+    "--mig-flow=identity",
+    "--import-lut",
+    "--fixed-mig-inv-opt"
+  ],
+  "admissible_gate_gain_max_inverter_increase": 1000,
+  "one_round_stagnation_stop": true
+}

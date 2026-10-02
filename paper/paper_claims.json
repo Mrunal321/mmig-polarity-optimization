@@ -1,0 +1,13 @@
+{
+  "flows": {
+    "T": {"G": 15454, "I_nonconst": 6749, "LUT6": 5863},
+    "P": {"G": 15205, "I_nonconst": 6501, "LUT6": 5815},
+    "M": {"G": 15070, "I_nonconst": 6021, "LUT6": 5867}
+  },
+  "M_vs_P_pct": {"G": -0.89, "I_nonconst": -7.38},
+  "M_vs_T_pct": {"G": -2.48, "I_nonconst": -10.79},
+  "lowered_phase_vs_P_I_pct": 2.57,
+  "native_MIN": 616,
+  "M_vs_P_counts": {"G": [9, 2, 1], "I_nonconst": [11, 1, 0]},
+  "lowering_I": {"native": 6021, "lowered_raw": 7028, "lowered_phase": 6668}
+}

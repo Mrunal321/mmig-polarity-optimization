@@ -1,0 +1,6 @@
+ABC https://github.com/berkeley-abc/abc ee899284b854bbd37acc9ddbe1dc598c9a2cf151
+Development source parent Git HEAD 78b701d2387629ad8f9858e9fad3b718d2ddfa34; tree was dirty.
+Vendored mockturtle and dependencies: exact per-file SHA-256 in artifact/SHA256SUMS; upstream commits unavailable in the development checkout.
+EPFL original BLIFs: exact SHA-256 in benchmarks/MANIFEST.csv; upstream commit unavailable.
+Ubuntu Docker base image sha256:a853f94d226358a79c740cfc7bce0c289748f3fe3488d921d038ccd752c61b60
+Ubuntu apt snapshot https://snapshot.ubuntu.com/ubuntu/20261001T000000Z/

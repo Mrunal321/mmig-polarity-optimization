@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and this frozen artifact when using these results."
+title: "Polarity-Aware Logic Optimization with Mixed Majority-Minority Inverter Graphs"
+authors:
+  - family-names: Shende
+    given-names: Mrunal
+version: "v1.0-esl-submission"
+date-released: 2026-10-03
+repository-code: "https://github.com/Mrunal321/mmig-polarity-optimization"
+license: MIT

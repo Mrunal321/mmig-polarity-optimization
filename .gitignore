@@ -1,0 +1,13 @@
+/.deps/
+/build/
+/results/generated/
+/logs/generated/
+/paper/*.aux
+/paper/*.bbl
+/paper/*.blg
+/paper/*.fdb_latexmk
+/paper/*.fls
+/paper/*.log
+/paper/*.out
+/scripts/__pycache__/
+/abc.history

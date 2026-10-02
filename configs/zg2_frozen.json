@@ -1,0 +1,42 @@
+{
+  "stage1": [
+    "--mode=area",
+    "--mig-flow=identity",
+    "--import-lut",
+    "--enable-mmig",
+    "--mmig-flow=compress2rs",
+    "--mmig-max-iters=3",
+    "--mmig-stage=both",
+    "--mmig-cec",
+    "--mmig-advanced",
+    "--mmig-dont-cares",
+    "--mmig-interleaved-seeding",
+    "--mmig-window-resyn",
+    "--mmig-window-cut=4",
+    "--mmig-window-internal=8",
+    "--mmig-window-candidates=2048",
+    "--mmig-window-matches=8",
+    "--mmig-window-roots=128",
+    "--mmig-window-min-inv-gain=1",
+    "--mmig-adv-objective=gate_inv",
+    "--mmig-window-objective=gate_inv",
+    "--mmig-window-max-inv-increase=0",
+    "--mmig-window-allow-output-polarity",
+    "--mmig-window-rank-local-inv",
+    "--mmig-adv-no-balance",
+    "--mmig-advanced-rounds=2",
+    "--mmig-adv-max-inv-increase=1000",
+    "--mmig-allow-zero-gain"
+  ],
+  "stage2": [
+    "--mode=area",
+    "--mig-flow=identity",
+    "--import-lut",
+    "--enable-mmig",
+    "--mmig-skip-opt",
+    "--mmig-post-phase",
+    "--mmig-two-phase"
+  ],
+  "stage_boundary": "BLIF write and reimport",
+  "selected_seeds_from": "benchmarks/MANIFEST.csv"
+}

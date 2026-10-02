@@ -1,0 +1,16 @@
+COMMAND: ["<ABC executable>", "-c", "read_blif results/generated/cec/intermediate/dec_M_gate.cec.work/a.norm.blif; strash; write_blif results/generated/cec/intermediate/dec_M_gate.cec.work/a.strash.blif"]
+RETURN_CODE: 0
+
+======== ABC command line "read_blif results/generated/cec/intermediate/dec_M_gate.cec.work/a.norm.blif; strash; write_blif results/generated/cec/intermediate/dec_M_gate.cec.work/a.strash.blif"
+
+COMMAND: ["<ABC executable>", "-c", "read_blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.norm.blif; strash; write_blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.strash.blif"]
+RETURN_CODE: 0
+
+======== ABC command line "read_blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.norm.blif; strash; write_blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.strash.blif"
+
+COMMAND: ["<ABC executable>", "-c", "cec results/generated/cec/intermediate/dec_M_gate.cec.work/a.strash.blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.strash.blif"]
+RETURN_CODE: 0
+
+======== ABC command line "cec results/generated/cec/intermediate/dec_M_gate.cec.work/a.strash.blif results/generated/cec/intermediate/dec_M_gate.cec.work/b.strash.blif"
+Networks are equivalent.  Time =     0.01 sec
+
