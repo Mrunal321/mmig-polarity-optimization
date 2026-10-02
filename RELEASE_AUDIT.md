@@ -5,7 +5,7 @@ This file records the verification status of the public `v1.0-esl-submission` ar
 | Question | Finding |
 |---|---|
 | Public GitHub URL | https://github.com/Mrunal321/mmig-polarity-optimization (public repository verified with `gh repo view`) |
-| Release/tag | `v1.0-esl-submission`; the tag is created only after the clean-clone test. |
+| Release/tag | [v1.0-esl-submission](https://github.com/Mrunal321/mmig-polarity-optimization/releases/tag/v1.0-esl-submission); created after the clean-clone test. |
 | Clean clone tested | Yes. Cloned public `main` into a fresh temporary directory, with no development checkout dependency or `MMIG_ABC` override. Tested source commit `77f07db3bcdc0fb87728c89c45d97a3953ca11d3`; full run elapsed 749 s on 2026-10-03. |
 | `./reproduce.sh` passes | Yes in the isolated release tree using a local ABC; elapsed 639 s. |
 | Docker reproduction tested | Yes: `./reproduce.sh --docker` passed in 638 s on 2026-10-03. |
@@ -18,6 +18,6 @@ This file records the verification status of the public `v1.0-esl-submission` ar
 | Secret scan findings | No high-confidence credential, private key, GitHub token, or local-path match in staged release content. `gitleaks` was unavailable; see `artifact/PUBLIC_RELEASE_AUDIT.md`. |
 | Third-party licensing issue | No identified blocker. Notices are retained and listed in `THIRD_PARTY_NOTICES.md`; the separate ABC binary is built from pinned public source. |
 | Machine-dependent result | The secondary pure-MIG time-budget sensitivity is wall-clock dependent and stored separately from deterministic paper totals. |
-| Exact commit used by manuscript link | The manuscript names the immutable `v1.0-esl-submission` tag. Resolve its exact commit with `git rev-parse v1.0-esl-submission^{commit}`; the literal SHA is recorded on public `main` after tag creation. |
+| Exact commit used by manuscript link | `1db980d853ae136a15498e138dc55ebe536d2536`; both local `git rev-parse v1.0-esl-submission^{commit}` and the remote peeled tag resolve to this SHA. |
 
 The container and clean clone reproduced the direct MIN-lowering sequence `6021 → 7028 → 6668` nonconstant complemented edges. The clean-clone command was `env -u MMIG_ABC -u MMIG_IN_DOCKER /usr/bin/time -p ./reproduce.sh` after `git clone https://github.com/Mrunal321/mmig-polarity-optimization.git`.
