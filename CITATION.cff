@@ -4,7 +4,7 @@ title: "Polarity-Aware Logic Optimization with Mixed Majority-Minority Inverter 
 authors:
   - family-names: Shende
     given-names: Mrunal
-version: "v1.0-esl-submission"
+version: "v1.1-esl-revision"
 date-released: 2026-10-03
 repository-code: "https://github.com/Mrunal321/mmig-polarity-optimization"
 license: MIT

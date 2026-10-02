@@ -8,6 +8,8 @@ This repository is the reproducibility artifact for the four-page IEEE Embedded 
 
 Compared with P, M has **7.38% fewer nonconstant complemented graph connections** and **0.89% fewer MAJ+MIN logic nodes** in aggregate. These connections are a graph metric, **not physical inverter cells**. Directly lowering MIN to MAJ/INV and reoptimizing polarity removes M's edge-count advantage relative to P. No physical area, energy, inverter, or equal-runtime claim follows.
 
+Table I also lists the per-circuit edge counts for T, the **local Testa-style** fixed-topology control. M has fewer such edges than T on ten circuits, ties on `adder`, and has more on `bar`. T is a method-inspired implementation, not Testa et al.'s original executable; published Testa numbers use different starting networks and cannot be treated as shared-input rows.
+
 ## Quick reproduction
 
 ```sh

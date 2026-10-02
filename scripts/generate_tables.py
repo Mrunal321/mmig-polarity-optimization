@@ -78,25 +78,25 @@ def main():
     out.mkdir(exist_ok=True)
     lines = [
         r'\begin{table*}[t]',
-        r'\caption{Matched structural results. $P$ is the pure-MIG control and $M$ is the frozen mMIG flow. $G$ counts MAJ+MIN nodes; $I$ counts complemented nonconstant graph connections. Negative changes favor $M$.}',
+        r'\caption{Shared-input results. $T$: local Testa-style phase control (not the original program); $P$: matched pure MIG; $M$: native mMIG. $G$: MAJ+MIN; $I$: nonconstant complemented edges. Changes compare $M$ with $P$.}',
         r'\label{tab:primary}',
         r'\centering',
-        r'\begin{tabular}{lrrrrrrr}',
+        r'\begin{tabular}{lrrrrrrrr}',
         r'\toprule',
-        r'Circuit & $P:G$ & $M:G$ & $\Delta G$ (\%) & $P:I$ & $M:I$ & $\Delta I$ (\%) & MIN \\',
+        r'Circuit & $P:G$ & $M:G$ & $\Delta G$ (\%) & $T:I$ & $P:I$ & $M:I$ & $\Delta I$ (\%) & MIN \\',
         r'\midrule',
     ]
     for name in ORDER:
-        p, m = data[name, 'P'], data[name, 'M']
+        t, p, m = (data[name, flow] for flow in ('T', 'P', 'M'))
         gp, gm = int(p['G']), int(m['G'])
-        ip, im = int(p['I_nonconst']), int(m['I_nonconst'])
+        it, ip, im = (int(row['I_nonconst']) for row in (t, p, m))
         lines.append(f'{name} & {gp} & {gm} & {signed(pct(gm, gp))} & '
-                     f'{ip} & {im} & {signed(pct(im, ip))} & {m["MIN_count"]} ' + r'\\')
+                     f'{it} & {ip} & {im} & {signed(pct(im, ip))} & {m["MIN_count"]} ' + r'\\')
     pg, mg = (int(totals[f]['G']) for f in ('P', 'M'))
-    pi, mi = (int(totals[f]['I_nonconst']) for f in ('P', 'M'))
+    ti, pi, mi = (int(totals[f]['I_nonconst']) for f in ('T', 'P', 'M'))
     lines += [r'\midrule',
               f'Sum & {pg} & {mg} & {signed(pct(mg, pg))} & '
-              f'{pi} & {mi} & {signed(pct(mi, pi))} & --- ' + r'\\',
+              f'{ti} & {pi} & {mi} & {signed(pct(mi, pi))} & --- ' + r'\\',
               r'\bottomrule', r'\end{tabular}', r'\end{table*}']
     (out / 'primary_pm_table.tex').write_text('% AUTO-GENERATED -- DO NOT EDIT\n' + '\n'.join(lines) + '\n')
 

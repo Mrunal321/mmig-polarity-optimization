@@ -68,7 +68,7 @@ pure-MIG structural and phase control, and (iii) twelve-circuit results
 including raw equivalence checks, direct MIN lowering, and a pure-MIG
 time-budget sensitivity test.\footnote{Source and reproducibility artifact:
 \url{https://github.com/Mrunal321/mmig-polarity-optimization}, release
-v1.0-esl-submission.} The mMIG flow has 0.89\% fewer aggregate
+v1.1-esl-revision.} The mMIG flow has 0.89\% fewer aggregate
 logic nodes and 7.38\% fewer native complemented connections than the
 matched control, while taking about ten times longer. These data describe
 the tested structural representations; they do not isolate MIN from every
@@ -211,8 +211,13 @@ nine, ties on two, and rises on \texttt{bar}. Fig.~\ref{fig:edges}
 shows the edge changes without removing the tie. Relative to $T$, $M$
 has 2.48\% fewer gates and 10.79\% fewer native complemented connections,
 but the matched $P$ flow itself improves on $T$ by 1.61\% and 3.67\%,
-respectively. The $T$ comparison alone would overstate the mixed-flow
-advantage attributable to representation.
+respectively. Table~\ref{tab:primary} lists $T$'s edge count per circuit;
+its fixed-topology pass leaves gate count unchanged. $M$ uses fewer edges
+than $T$ on ten circuits, ties on \texttt{adder}, and is worse on
+\texttt{bar} (624 versus 486). The $T$ comparison alone would overstate
+the mixed-flow advantage attributable to representation. Published
+Testa numbers use different starting MIGs and cannot be inserted as
+same-input results~\cite{testa2016inv}.
 The largest percentage change is \texttt{dec} ($16$ to $8$ edges), where
 the denominator is small. On the much larger \texttt{voter}, the
 corresponding change is $2{,}482$ to $2{,}425$ edges ($-2.30\%$).
